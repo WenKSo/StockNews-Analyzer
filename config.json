@@ -1,0 +1,26 @@
+{
+    "data_paths": {
+        "input_dir": "data/raw",
+        "output_dir": "data/processed",
+        "archive_dir": "data/archive"
+    },
+    "processing": {
+        "interval_minutes": 1,
+        "run_continuously": true
+    },
+    "data_cleaning": {
+        "remove_duplicates": true,
+        "drop_empty_content": true,
+        "required_fields": ["title", "content", "publish_time", "source"]
+    },
+    "integration": {
+        "target_db_file": "news_database.db",
+        "table_name": "news_articles"
+    },
+    "output_json_file": "data/news_data.json",
+    "watcher": {
+        "enabled": true,
+        "check_interval_seconds": 30,
+        "processed_records_file": "data/processed_records.json"
+    }
+} 

@@ -184,7 +184,8 @@ st.sidebar.image("https://img.freepik.com/free-vector/stock-market-concept_23-21
 st.sidebar.header("🛠️ 操作面板")
 option = st.sidebar.selectbox(
     "选择操作",
-    ["分析新闻数据", "手动输入新闻"]
+    ["分析新闻数据", "手动输入新闻"],
+    index=1  # 设置默认选项为 "手动输入新闻"
 )
 
 # 添加一些装饰性元素
